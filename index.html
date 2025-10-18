@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thollarking's Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <article data-testid="test-profile-card" class="profile-card">
+    <header>
+      <h2 data-testid="test-user-name" class="name">Thollarkings</h2>
+    </header>
+
+    <figure>
+      <img 
+        src="avatar.png" 
+        alt="Profile photo of Thollarkings - Omotola Oyeniyi" 
+        data-testid="test-user-avatar"
+      />
+      <figcaption>
+        <p data-testid="test-user-bio">
+          Front-End Developer with a strong foundation in web development and UI/UX design, transitioning from academic research into full-time software engineering. Proficient in building scalable, interactive, and accessible web applications using modern technologies like React, JavaScript, and Tailwind CSS.
+        </p>
+      </figcaption>
+    </figure>
+
+    <nav data-testid="test-user-social-links">
+      <ul>
+        <li><a data-testid="test-user-social-github" href="https://github.com/thollarkings" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a data-testid="test-user-social-linkedin" href="https://linkedin.com/in/omotola-oyeniyi-410b2693/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a data-testid="test-user-social-twitter" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+      </ul>
+    </nav>
+
+    <section class="hobbies">
+      <h3>Hobbies</h3>
+      <ul data-testid="test-user-hobbies">
+        <li>Coding</li>
+        <li>Design</li>
+        <li>Gaming</li>
+        <li>DIY</li>
+      </ul>
+    </section>
+
+    <section class="dislikes">
+      <h3>Dislikes</h3>
+      <ul data-testid="test-user-dislikes">
+        <li>Slow websites</li>
+        <li>Bad UX</li>
+      </ul>
+    </section>
+
+    <p data-testid="test-user-time" id="time" class="time">Current Time</p>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
