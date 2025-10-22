@@ -5,14 +5,16 @@ A responsive, accessible portfolio with profile card, contact form, and about pa
 🚀 Live Demo
 View on GitHub Pages
 
-📂 Pages
+📂 Pages - 
+
 Profile (index.html) - Modern card with hobbies & social links
 
 Contact (contact.html) - Accessible form with validation
 
 About (about.html) - Reflective personal insights
 
-✨ Features
+✨ Features - 
+
 ✅ Fully Responsive - Mobile-first design
 
 ✅ Accessible - ARIA labels, keyboard navigation
@@ -23,19 +25,23 @@ About (about.html) - Reflective personal insights
 
 ✅ Semantic HTML - Clean, structured code
 
-🛠 Tech Stack
+🛠 Tech Stack -
+
 HTML5, CSS3, Vanilla JavaScript
 
 Font Awesome Icons
 
 GitHub Pages Hosting
 
-💻 Quick Start
+💻 Quick Start -
+
 bash
 git clone https://github.com/Thollarkings/Modern-Profile-Card.git
 cd Modern-Profile-Card
 # Open index.html in browser
-📞 Connect
+
+📞 Connect -
+
 Omotola Oyeniyi
 📧 mediaxtreme1@gmail.com
 💼 LinkedIn
