@@ -1,46 +1,42 @@
-# 🌟 Modern Profile Card
+🌟 Modern Profile Card Portfolio
+A responsive, accessible portfolio with profile card, contact form, and about page. Built with semantic HTML, CSS, and JavaScript.
 
-A simple, **accessible**, and **responsive** Profile Card built with **HTML, CSS, and Vanilla JavaScript** as part of my **Frontend Wizards Stage 0 Internship Task**.
+🚀 Live Demo
+View on GitHub Pages
 
-This project showcases semantic HTML, responsive design, and automated test-friendly attributes (`data-testid`) for stable testing.
+📂 Pages
+Profile (index.html) - Modern card with hobbies & social links
 
----
+Contact (contact.html) - Accessible form with validation
 
-## 🚀 Live Demo
+About (about.html) - Reflective personal insights
 
-👉 [Please View on GitHub Pages @](https://thollarkings.github.io/Modern-Profile-Card/)
+✨ Features
+✅ Fully Responsive - Mobile-first design
 
----
+✅ Accessible - ARIA labels, keyboard navigation
 
-## 📂 My Project Structure
+✅ Form Validation - Real-time error handling
 
-Modern-Profile-Card/
-│
-├── index.html 
-├── style.css
-├── script.js
-├── avatar.jpg 
-└── README.md 
+✅ Modern UI - CSS variables, animations
 
+✅ Semantic HTML - Clean, structured code
 
----
+🛠 Tech Stack
+HTML5, CSS3, Vanilla JavaScript
 
-## 🧠 Features
+Font Awesome Icons
 
-- ✅ Semantic, accessible HTML structure  
-- ✅ Responsive layout using **Flexbox** and **media queries**  
-- ✅ Dynamic timestamp rendered in **milliseconds** using `Date.now()`  
-- ✅ Keyboard-navigable social links  
-- ✅ Distinct "Hobbies" and "Dislikes" sections  
-- ✅ All elements include `data-testid` for automated testing  
+GitHub Pages Hosting
 
----
+💻 Quick Start
+bash
+git clone https://github.com/Thollarkings/Modern-Profile-Card.git
+cd Modern-Profile-Card
+# Open index.html in browser
+📞 Connect
+Omotola Oyeniyi
+📧 mediaxtreme1@gmail.com
+💼 LinkedIn
+💻 GitHub
 
-## 💻 Run Locally
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Thollarkings/Modern-Profile-Card.git
-
-Created by Thollarkings - Oyeniyi Omotola for HNG13
