@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thollarking's Profile Card</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <article data-testid="test-profile-card" class="profile-card">
+  <article data-testid="test-profile-card" class="card profile-card">
     <header>
       <h2 data-testid="test-user-name" class="name">Thollarkings</h2>
     </header>
@@ -34,9 +35,20 @@
       </ul>
     </nav>
 
-    <section class="hobbies">
-      <h3>Hobbies</h3>
-      <ul data-testid="test-user-hobbies">
+    <div class="navigation-group">
+      <a href="about.html" class="btn btn-primary">
+        <i class="fas fa-user-circle"></i>
+        About Me
+      </a>
+      <a href="contact.html" class="btn btn-primary">
+        <i class="fas fa-envelope"></i>
+        Contact Me
+      </a>
+    </div>
+
+    <section class="content-section hobbies">
+      <h3 class="section-header">Hobbies</h3>
+      <ul data-testid="test-user-hobbies" class="grid-list">
         <li>Coding</li>
         <li>Design</li>
         <li>Gaming</li>
@@ -44,13 +56,11 @@
       </ul>
     </section>
 
-    <section class="dislikes">
-      <h3>Dislikes</h3>
-      <ul data-testid="test-user-dislikes">
+    <section class="content-section dislikes">
+      <h3 class="section-header">Dislikes</h3>
+      <ul data-testid="test-user-dislikes" class="grid-list">
         <li>Slow websites</li>
         <li>Bad UX</li>
-        <li>Horrible Characters</li>
-        <li>Selfishness</li>
       </ul>
     </section>
 

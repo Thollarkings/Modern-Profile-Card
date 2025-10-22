@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Omotola Oyeniyi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <main class="card contact-card">
+    <header>
+      <h1 class="name">Contact Me</h1>
+      <p class="subtitle">Get in touch - I'd love to hear from you!</p>
+    </header>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input 
+          type="text" 
+          id="fullName" 
+          name="fullName"
+          data-testid="test-contact-name"
+          required
+          aria-describedby="name-error"
+        >
+        <span 
+          id="name-error" 
+          class="error-message"
+          data-testid="test-contact-error-name"
+          aria-live="polite"
+        ></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email"
+          data-testid="test-contact-email"
+          required
+          aria-describedby="email-error"
+        >
+        <span 
+          id="email-error" 
+          class="error-message"
+          data-testid="test-contact-error-email"
+          aria-live="polite"
+        ></span>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input 
+          type="text" 
+          id="subject" 
+          name="subject"
+          data-testid="test-contact-subject"
+          required
+          aria-describedby="subject-error"
+        >
+        <span 
+          id="subject-error" 
+          class="error-message"
+          data-testid="test-contact-error-subject"
+          aria-live="polite"
+        ></span>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea 
+          id="message" 
+          name="message"
+          rows="6"
+          data-testid="test-contact-message"
+          required
+          aria-describedby="message-error"
+        ></textarea>
+        <span 
+          id="message-error" 
+          class="error-message"
+          data-testid="test-contact-error-message"
+          aria-live="polite"
+        ></span>
+      </div>
+
+      <button 
+        type="submit" 
+        class="btn btn-primary"
+        data-testid="test-contact-submit"
+      >
+        <i class="fas fa-paper-plane"></i>
+        Send Message
+      </button>
+
+      <div 
+        id="success-message" 
+        class="success-message"
+        data-testid="test-contact-success"
+        aria-live="polite"
+      ></div>
+    </form>
+
+    <div class="navigation-group">
+      <a href="index.html" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i>
+        Back to Profile
+      </a>
+      <a href="about.html" class="btn btn-primary">
+        <i class="fas fa-user-circle"></i>
+        About Me
+      </a>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      const successMessage = document.getElementById('success-message');
+
+      function showError(inputId, message) {
+        const errorElement = document.querySelector(`[data-testid="test-contact-error-${inputId}"]`);
+        const inputElement = document.querySelector(`[data-testid="test-contact-${inputId}"]`);
+        
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+        inputElement.setAttribute('aria-invalid', 'true');
+      }
+
+      function clearError(inputId) {
+        const errorElement = document.querySelector(`[data-testid="test-contact-error-${inputId}"]`);
+        const inputElement = document.querySelector(`[data-testid="test-contact-${inputId}"]`);
+        
+        errorElement.textContent = '';
+        errorElement.style.display = 'none';
+        inputElement.setAttribute('aria-invalid', 'false');
+      }
+
+      function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function validateForm() {
+        let isValid = true;
+        
+        // Validate Name
+        const name = form.elements.fullName.value.trim();
+        if (!name) {
+          showError('name', 'Full name is required');
+          isValid = false;
+        } else {
+          clearError('name');
+        }
+
+        // Validate Email
+        const email = form.elements.email.value.trim();
+        if (!email) {
+          showError('email', 'Email is required');
+          isValid = false;
+        } else if (!validateEmail(email)) {
+          showError('email', 'Please enter a valid email address');
+          isValid = false;
+        } else {
+          clearError('email');
+        }
+
+        // Validate Subject
+        const subject = form.elements.subject.value.trim();
+        if (!subject) {
+          showError('subject', 'Subject is required');
+          isValid = false;
+        } else {
+          clearError('subject');
+        }
+
+        // Validate Message
+        const message = form.elements.message.value.trim();
+        if (!message) {
+          showError('message', 'Message is required');
+          isValid = false;
+        } else if (message.length < 10) {
+          showError('message', 'Message must be at least 10 characters long');
+          isValid = false;
+        } else {
+          clearError('message');
+        }
+
+        return isValid;
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validateForm()) {
+          // Show success message
+          successMessage.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            <strong>Thank you for your message!</strong>
+            <p>I'll get back to you as soon as possible.</p>
+          `;
+          successMessage.style.display = 'block';
+          
+          // Reset form
+          form.reset();
+          
+          // Scroll to success message
+          successMessage.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      // Real-time validation
+      form.addEventListener('input', function(e) {
+        const input = e.target;
+        const inputId = input.dataset.testid?.replace('test-contact-', '');
+        
+        if (inputId) {
+          clearError(inputId);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
