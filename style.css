@@ -170,7 +170,7 @@ nav a:hover { background: var(--primary); color: white; transform: translateY(-2
 .fun-loving .trait-icon { background: linear-gradient(135deg, #ff6b6b, #ffa726); }
 .problem-solver .trait-icon { background: linear-gradient(135deg, #4ecdc4, #44a08d); }
 .dedicated .trait-icon { background: linear-gradient(135deg, #ffa726, #ff9800); }
-.DIY .trait-icon { background: linear-gradient(135deg, #8e2de2, #4a00e0); }
+.diy-enthusiast .trait-icon { background: linear-gradient(135deg, #8e2de2, #4a00e0); }
 
 .passions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-md); }
 .passion-item { padding: var(--space-md); border-radius: var(--radius-lg); transition: all var(--transition-normal); }
